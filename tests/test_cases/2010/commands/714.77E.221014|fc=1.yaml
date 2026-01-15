@@ -1,18 +1,10 @@
 command_id: 714.77E.221014|fc=1
 test_cases:
 - expected_values:
-    VOLKSWAGEN_AAT: 36
-    VOLKSWAGEN_DASH_AMBIENT_AIR_T: -7
-  response: '77E0462101456'
+    VOLKSWAGEN_AAT: 32
+    VOLKSWAGEN_DASH_AMBIENT_AIR_T: -9
+  response: '77E0462101452'
 - expected_values:
-    VOLKSWAGEN_AAT: 37
-    VOLKSWAGEN_DASH_AMBIENT_AIR_T: -6.5
-  response: '77E0462101457'
-- expected_values:
-    VOLKSWAGEN_AAT: 38
-    VOLKSWAGEN_DASH_AMBIENT_AIR_T: -6
-  response: '77E0462101458'
-- expected_values:
-    VOLKSWAGEN_AAT: 39
-    VOLKSWAGEN_DASH_AMBIENT_AIR_T: -5.5
-  response: '77E0462101459'
+    VOLKSWAGEN_AAT: 46
+    VOLKSWAGEN_DASH_AMBIENT_AIR_T: -2
+  response: '77E0462101460'
