@@ -10,6 +10,9 @@ test_cases:
     VOLKSWAGEN_PQ35_FUEL_LVL: 36
   response: '77E0462220624'
 - expected_values:
+    VOLKSWAGEN_PQ35_FUEL_LVL: 39
+  response: '77E0462220627'
+- expected_values:
     VOLKSWAGEN_PQ35_FUEL_LVL: 43
   response: 77E046222062B
 - expected_values:
