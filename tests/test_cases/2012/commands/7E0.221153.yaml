@@ -1,4 +1,4 @@
-command_id: 7E0.7E8.221153
+command_id: 7E0.221153
 test_cases:
 - expected_values:
     VOLKSWAGEN_EM_TORQ_1: 0.3125
