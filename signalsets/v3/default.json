@@ -1,4 +1,582 @@
 { "commands": [
-
+{ "hdr": "714", "rax": "77E", "fcm1": true, "cmd": {"22": "1014"}, "freq": 1, "dbgfilter": { "to": 2009, "years": [2011], "from": 2013 },
+  "signals": [
+    {"id": "SCIROCCO_AAT", "path": "Climate", "fmt": { "len": 8, "max": 77.5, "min": -50, "div": 2, "add": -50, "unit": "celsius" }, "name": "Ambient air temperature"}
+  ]},
+{ "hdr": "714", "rax": "77E", "fcm1": true, "cmd": {"22": "2206"}, "freq": 1, "dbgfilter": { "to": 2009, "from": 2011 },
+  "signals": [
+    {"id": "SCIROCCO_FLI", "path": "Fuel", "fmt": { "len": 8, "max": 255, "unit": "liters" }, "name": "Fuel level", "suggestedMetric": "fuelTankLevel"}
+  ]},
+{ "hdr": "714", "rax": "77E", "fcm1": true, "cmd": {"22": "220C"}, "freq": 5, "dbgfilter": { "to": 2009, "from": 2011 },
+  "signals": [
+    {"id": "SCIROCCO_OUTSIDE_T", "path": "Engine", "fmt": { "len": 8, "max": 77.5, "min": -50, "div": 2, "add": -50, "unit": "celsius" }, "name": "Outside temperature"}
+  ]},
+{ "hdr": "714", "rax": "77E", "fcm1": true, "cmd": {"22": "224B"}, "freq": 1, "dbgfilter": { "to": 2009, "from": 2011 },
+  "signals": [
+    {"id": "SCIROCCO_OIL_THERMAL_WEAR", "path": "ECU", "fmt": { "len": 16, "max": 65535, "unit": "kilometers" }, "name": "Oil thermal wear"}
+  ]},
+{ "hdr": "714", "rax": "77E", "fcm1": true, "cmd": {"22": "2299"}, "freq": 1, "dbgfilter": { "to": 2009, "from": 2011 },
+  "signals": [
+    {"id": "SCIROCCO_FUEL_USE_AVG", "path": "Fuel", "fmt": { "len": 16, "max": 6553.5, "div": 10, "unit": "liters" }, "name": "Average fuel consumption"}
+  ]},
+{ "hdr": "7E0", "cmd": {"22": "11C4"}, "freq": 30, "dbgfilter": { "to": 2011, "from": 2013 },
+  "signals": [
+    {"id": "SCIROCCO_OIL_MAX", "path": "Fluids", "fmt": { "len": 16, "max": 262, "div": 250, "unit": "centimeters" }, "name": "Oil level, max"}
+  ]},
+{ "hdr": "7E0", "cmd": {"22": "11C5"}, "freq": 30, "dbgfilter": { "to": 2011, "from": 2013 },
+  "signals": [
+    {"id": "SCIROCCO_OIL_MIN", "path": "Fluids", "fmt": { "len": 16, "max": 262, "div": 250, "unit": "centimeters" }, "name": "Oil level, min"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "din": "03", "dbg": true, "cmd": {"22": "080C"}, "freq": 1,
+  "signals": [
+    {"id": "SCIROCCO_POST_INJ_2", "path": "Engine", "fmt": { "len": 16, "max": 6553.5, "div": 10, "unit": "unknown" }, "name": "Post injection 2"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "din": "03", "dbg": true, "cmd": {"22": "081A"}, "freq": 1,
+  "signals": [
+    {"id": "SCIROCCO_POST_INJ_1", "path": "Engine", "fmt": { "len": 16, "max": 6553.5, "div": 10, "unit": "unknown" }, "name": "Post injection 1"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "din": "03", "dbg": true, "cmd": {"22": "081B"}, "freq": 1,
+  "signals": [
+    {"id": "SCIROCCO_POST_INJ_3", "path": "Engine", "fmt": { "len": 16, "max": 6553.5, "div": 10, "unit": "unknown" }, "name": "Post injection 3"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "fcm1": true, "dbg": true, "cmd": {"22": "1000"}, "freq": 5,
+  "signals": [
+    {"id": "SCIROCCO_AAT_7E0", "path": "Engine", "fmt": { "len": 8, "max": 143, "min": -48, "mul": 3, "div": 4, "add": -48, "unit": "celsius" }, "name": "Ambient temperature"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "fcm1": true, "dbg": true, "cmd": {"22": "1001"}, "freq": 5,
+  "signals": [
+    {"id": "SCIROCCO_IAT_7E0", "path": "Engine", "fmt": { "len": 8, "max": 143, "min": -48, "mul": 3, "div": 4, "add": -48, "unit": "celsius" }, "name": "Intake air temperature"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "pri": "17", "fcm1": true, "dbg": true, "cmd": {"22": "1010"}, "freq": 0.25,
+  "signals": [
+    {"id": "SCIROCCO_ENGINE_TORQUE", "path": "Engine", "fmt": { "len": 16, "max": 3276.7, "min": -3276.8, "div": 10, "sign": true, "unit": "newtonMeters" }, "name": "Engine torque"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "pri": "17", "fcm1": true, "dbg": true, "cmd": {"22": "101A"}, "freq": 0.25,
+  "signals": [
+    {"id": "SCIROCCO_A_C_COMPRESSOR_TORQUE", "path": "Engine", "fmt": { "len": 16, "max": 3276.7, "min": -3276.8, "div": 10, "sign": true, "unit": "newtonMeters" }, "name": "A/C compressor torque"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "pri": "17", "fcm1": true, "dbg": true, "cmd": {"22": "101B"}, "freq": 0.25,
+  "signals": [
+    {"id": "SCIROCCO_GENERATOR_TORQUE_REQUEST", "path": "Engine", "fmt": { "len": 16, "max": 3276.7, "min": -3276.8, "div": 10, "sign": true, "unit": "newtonMeters" }, "name": "Generator torque request"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "pri": "17", "fcm1": true, "dbg": true, "cmd": {"22": "101C"}, "freq": 1,
+  "signals": [
+    {"id": "SCIROCCO_GENERATOR_LOAD_SIG", "path": "Engine", "fmt": { "len": 16, "max": 100, "div": 100, "sign": true, "unit": "percent" }, "name": "Generator load signal"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "din": "03", "dbg": true, "cmd": {"22": "102C"}, "freq": 5,
+  "signals": [
+    {"id": "SCIROCCO_ECT_RADIATOR_OUTLET_ACT_7E0", "path": "Engine", "fmt": { "len": 16, "max": 6280, "min": -273, "div": 10, "add": -273.1, "unit": "celsius" }, "name": "Coolant temperature at radiator outlet, actual value"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "din": "03", "dbg": true, "cmd": {"22": "1056"}, "freq": 1,
+  "signals": [
+    {"id": "SCIROCCO_AIR_P_CAC_DS", "path": "Battery", "fmt": { "len": 16, "max": 32767, "min": -32768, "sign": true, "unit": "unknown" }, "name": "Charge air pressure, actual value"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "1059"}, "freq": 0.25,
+  "signals": [
+    {"id": "SCIROCCO_ACCEL_PEDAL_TQ_LIM", "path": "Movement", "fmt": { "len": 16, "max": 3276.7, "min": -3276.8, "div": 10, "sign": true, "unit": "newtonMeters" }, "name": "Accelerator pedal torque limit"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "din": "03", "dbg": true, "cmd": {"22": "1064"}, "freq": 5,
+  "signals": [
+    {"id": "SCIROCCO_ECT_ENG_OUTLET_CALC", "path": "Engine", "fmt": { "len": 16, "max": 6280, "min": -273, "div": 10, "add": -273.1, "unit": "celsius" }, "name": "Coolant temperature at engine outlet, calculated"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "108C"}, "freq": 30,
+  "signals": [
+    {"id": "SCIROCCO_ODO_7E0", "path": "Trips", "fmt": { "len": 32, "max": 4294967295, "unit": "kilometers" }, "name": "Odometer", "suggestedMetric": "odometer"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "pri": "17", "fcm1": true, "dbg": true, "cmd": {"22": "1097"}, "freq": 1,
+  "signals": [
+    {"id": "SCIROCCO_GENERATOR_PERFORMANCE", "path": "Engine", "fmt": { "len": 16, "max": 308822.421, "min": -308831.8464, "mul": 94248, "div": 10000, "sign": true, "unit": "watts" }, "name": "Generator performance"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "10CA"}, "freq": 1,
+  "signals": [
+    {"id": "SCIROCCO_ACCEL_7E0", "path": "Movement", "fmt": { "len": 16, "max": 32.76, "min": -32.76, "div": 1000, "sign": true, "unit": "metersPerSecondSquared" }, "name": "Acceleration"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "pri": "17", "fcm1": true, "dbg": true, "cmd": {"22": "10E5"}, "freq": 1,
+  "signals": [
+    {"id": "SCIROCCO_IGNITION_TIMING_ANGLE_RETARD_C4", "path": "Engine", "fmt": { "len": 16, "max": 24575.25, "min": -24576, "mul": 75, "div": 100, "sign": true, "unit": "degrees" }, "name": "Ignition timing angle retard, cylinder 4"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "10F5"}, "freq": 1,
+  "signals": [
+    {"id": "SCIROCCO_MIS_4", "path": "Engine", "fmt": { "len": 16, "max": 65535, "unit": "scalar" }, "name": "Misfires, cylinder 4"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "din": "03", "dbg": true, "cmd": {"22": "1117"}, "freq": 1,
+  "signals": [
+    {"id": "SCIROCCO_CLT_FAN_1_ACTIVATION_1117", "path": "Engine", "fmt": { "len": 16, "max": 327, "min": -327, "div": 100, "sign": true, "unit": "percent" }, "name": "Coolant fan 1 activation, $1117"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "111B"}, "freq": 1,
+  "signals": [
+    {"id": "SCIROCCO_HIGH_FUEL_P_TGT", "path": "Fuel", "fmt": { "len": 16, "max": 32.76, "div": 2000, "unit": "unknown" }, "name": "High fuel pressure, target"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "din": "03", "dbg": true, "cmd": {"22": "111C"}, "freq": 5,
+  "signals": [
+    {"id": "SCIROCCO_FUEL_T_7E0_2", "path": "Fuel", "fmt": { "len": 16, "max": 6280, "min": -273, "div": 10, "add": -273.1, "unit": "celsius" }, "name": "Fuel temperature"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "pri": "17", "fcm1": true, "dbg": true, "cmd": {"22": "1124"}, "freq": 0.25,
+  "signals": [
+    {"id": "SCIROCCO_CAMSHAFT_VSS", "path": "Movement", "fmt": { "len": 16, "max": 16383.75, "mul": 2500, "div": 10000, "unit": "rpm" }, "name": "Camshaft speed"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "pri": "17", "fcm1": true, "dbg": true, "cmd": {"22": "1130"}, "freq": 1,
+  "signals": [
+    {"id": "SCIROCCO_COOLANT_FAN_1_ACTIVATION", "path": "Engine", "fmt": { "len": 16, "max": 100, "mul": 100, "div": 10000, "sign": true, "unit": "percent" }, "name": "Coolant fan 1, activation"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "cmd": {"22": "1153"}, "freq": 1, "dbgfilter": { "to": 2011, "from": 2013 },
+  "signals": [
+    {"id": "SCIROCCO_PQ35_DPF_OIL_ASH_VOL", "path": "Engine.DPF", "fmt": { "len": 16, "max": 327.67, "min": -327.68, "div": 100, "sign": true, "unit": "liters" }, "name": "Diesel particulate filter oil ash volume"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "din": "03", "cmd": {"22": "1156"}, "freq": 30, "dbgfilter": { "to": 2011, "from": 2013 },
+  "signals": [
+    {"id": "SCIROCCO_PQ35_DIST_LAST_REGEN", "path": "Engine.DPF", "fmt": { "len": 32, "max": 4294967, "div": 1000, "unit": "kilometers" }, "name": "Distance since last regeneration"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "cmd": {"22": "115B"}, "freq": 1, "dbgfilter": { "to": 2011, "from": 2013 },
+  "signals": [
+    {"id": "SCIROCCO_PARTICLE_FLT_FIELD", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Particle filter, field regeneration request status"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "pri": "17", "fcm1": true, "dbg": true, "cmd": {"22": "1161"}, "freq": 1,
+  "signals": [
+    {"id": "SCIROCCO_ENGINE_RPM_AT_IDLE_REQUIRED", "path": "Movement", "fmt": { "len": 16, "max": 16383.5, "min": -16384, "div": 2, "sign": true, "unit": "rpm" }, "name": "Engine RPM at idle required"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "cmd": {"22": "1164"}, "freq": 30, "dbgfilter": { "to": 2011, "from": 2013 },
+  "signals": [
+    {"id": "SCIROCCO_PQ35_SRV_REGEN_DUR", "path": "Battery", "fmt": { "len": 32, "max": 715827, "mul": 0.0001666667, "unit": "minutes" }, "name": "Service regeneration current duration"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "din": "03", "dbg": true, "cmd": {"22": "1177"}, "freq": 5,
+  "signals": [
+    {"id": "SCIROCCO_T_AC_HEAT_EXCHANGER", "path": "Engine", "fmt": { "len": 16, "max": 6280, "min": -273, "div": 10, "add": -273.1, "unit": "celsius" }, "name": "Temperature at air conditioner heat exchanger output"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "din": "03", "dbg": true, "cmd": {"22": "1181"}, "freq": 1,
+  "signals": [
+    {"id": "SCIROCCO_HIGH_P_TURBOCHARGER", "path": "Battery", "fmt": { "len": 16, "max": 327, "min": -327, "div": 100, "sign": true, "unit": "percent" }, "name": "Charge adjuster output stage"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "11A0"}, "freq": 1,
+  "signals": [
+    {"id": "SCIROCCO_INLET_FLAPS_REQ", "path": "Engine", "fmt": { "len": 16, "max": 100, "mul": 20, "div": 13107, "unit": "percent" }, "name": "Inlet flaps - requested value"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "din": "03", "dbg": true, "cmd": {"22": "11A9"}, "freq": 1,
+  "signals": [
+    {"id": "SCIROCCO_HIGH_P_EGR_ACTUATOR_ACT_V", "path": "Battery", "fmt": { "len": 16, "max": 6553, "min": -6553, "div": 5, "sign": true, "unit": "millivolts" }, "name": "High pressure exhaust gas recirculation actuator, actual unconditioned voltage"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "din": "03", "dbg": true, "cmd": {"22": "11B5"}, "freq": 5,
+  "signals": [
+    {"id": "SCIROCCO_ECT_RADIATOR_OUTLET", "path": "Engine", "fmt": { "len": 16, "max": 6280, "min": -273, "div": 10, "add": -273.1, "unit": "celsius" }, "name": "Coolant temperature at radiator outlet"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "cmd": {"22": "11BD"}, "freq": 3600, "dbgfilter": { "to": 2011, "from": 2013 },
+  "signals": [
+    {"id": "SCIROCCO_OIL_LEVEL_WARN", "path": "Fluids", "fmt": { "len": 16, "max": 26.2, "div": 2500, "unit": "centimeters" }, "name": "Oil level warning threshold"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "cmd": {"22": "11BE"}, "freq": 5, "dbgfilter": { "to": 2011, "from": 2013 },
+  "signals": [
+    {"id": "SCIROCCO_PQ35_OIL_T_2", "path": "Engine", "fmt": { "len": 16, "max": 6280.4, "min": -273.1, "div": 10, "add": -273.1, "unit": "celsius" }, "name": "Oil temperature variant"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "11CE"}, "freq": 1,
+  "signals": [
+    {"id": "SCIROCCO_LOW_FUEL_P_CMD", "path": "Fuel", "fmt": { "len": 16, "max": 6553.5, "div": 10, "unit": "kilopascal" }, "name": "Low fuel pressure, commanded"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "11CF"}, "freq": 0.25,
+  "signals": [
+    {"id": "SCIROCCO_BRAKE_BOOSTER_P", "path": "Control", "fmt": { "len": 16, "max": 2559, "mul": 19531, "div": 500000, "unit": "unknown" }, "name": "Brake booster pressure"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "11D0"}, "freq": 1,
+  "signals": [
+    {"id": "SCIROCCO_TCO_1_ST", "path": "Engine", "fmt": { "len": 8, "max": 215, "min": -40, "add": -40, "unit": "celsius" }, "name": "TCO_1_ST"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "11D7"}, "freq": 1,
+  "signals": [
+    {"id": "SCIROCCO_HIGH_FUEL_P_CMD", "path": "Fuel", "fmt": { "len": 16, "max": 32.7675, "div": 2000, "unit": "unknown" }, "name": "High fuel pressure, commanded"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "11FF"}, "freq": 1,
+  "signals": [
+    {"id": "SCIROCCO_EA888B_BOOST_P_CTRL_0", "path": "Engine", "fmt": { "len": 8, "max": 356.87, "min": -359.68, "mul": 281, "div": 100, "sign": true, "unit": "unknown" }, "name": "Ea888b boost pressure control, adaptation value 0"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "pri": "17", "fcm1": true, "dbg": true, "cmd": {"22": "120E"}, "freq": 1,
+  "signals": [
+    {"id": "SCIROCCO_KNOCK_SNS_C1_V_MS", "path": "Engine", "fmt": { "len": 32, "max": 3276, "mul": 0.0076294, "div": 10000, "unit": "scalar" }, "name": "Knock sensor, cylinder 1 "}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "pri": "17", "fcm1": true, "dbg": true, "cmd": {"22": "120F"}, "freq": 1,
+  "signals": [
+    {"id": "SCIROCCO_KNOCK_SNS_C3_V_MS", "path": "Engine", "fmt": { "len": 32, "max": 3276, "mul": 0.0076294, "div": 10000, "unit": "scalar" }, "name": "Knock sensor, cylinder 3 "}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "pri": "17", "fcm1": true, "dbg": true, "cmd": {"22": "1210"}, "freq": 1,
+  "signals": [
+    {"id": "SCIROCCO_KNOCK_SNS_C4_V_MS", "path": "Engine", "fmt": { "len": 32, "max": 3276, "mul": 0.0076294, "div": 10000, "unit": "scalar" }, "name": "Knock sensor, cylinder 4 "}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "pri": "17", "fcm1": true, "dbg": true, "cmd": {"22": "1211"}, "freq": 1,
+  "signals": [
+    {"id": "SCIROCCO_KNOCK_SNS_C2_V_MS", "path": "Engine", "fmt": { "len": 32, "max": 3276, "mul": 0.0076294, "div": 10000, "unit": "scalar" }, "name": "Knock sensor, cylinder 2 "}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "din": "03", "dbg": true, "cmd": {"22": "121A"}, "freq": 1,
+  "signals": [
+    {"id": "SCIROCCO_PRE_INJ_3_ACTIVATION", "path": "Engine", "fmt": { "len": 16, "max": 13.1, "min": -13.1, "div": 2500, "sign": true, "unit": "milliseconds" }, "name": "Pilot injection 3, activation duration"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "din": "03", "dbg": true, "cmd": {"22": "121B"}, "freq": 1,
+  "signals": [
+    {"id": "SCIROCCO_POST_INJ_2_7E0", "path": "Engine", "fmt": { "len": 16, "max": 13.1, "min": -13.1, "div": 2500, "sign": true, "unit": "milliseconds" }, "name": "Post-injection 2, activation duration"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "din": "03", "dbg": true, "cmd": {"22": "121D"}, "freq": 1,
+  "signals": [
+    {"id": "SCIROCCO_PRE_INJ_3_ACTIVATION_START", "path": "Engine", "fmt": { "len": 16, "max": 655, "min": -655, "div": 50, "sign": true, "unit": "degrees" }, "name": "Pilot injection 3, activation start"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "pri": "17", "fcm1": true, "dbg": true, "cmd": {"22": "1272"}, "freq": 5,
+  "signals": [
+    {"id": "SCIROCCO_REAR_CAT_CONV_T_MAIN_CAT_CONV_MODEL_VALUE", "path": "Engine", "fmt": { "len": 16, "max": 3003.6, "min": -3549.9, "div": 10, "add": -273.1, "sign": true, "unit": "celsius" }, "name": "Rear cat converter temperature, main catalytic converter model value"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "pri": "17", "fcm1": true, "dbg": true, "cmd": {"22": "1290"}, "freq": 5,
+  "signals": [
+    {"id": "SCIROCCO_OXYGEN_SNS_1_BANK_1_CERAMIC_T", "path": "Engine", "fmt": { "len": 16, "max": 1262.793, "min": -273.15, "mul": 234.37, "div": 10000, "add": -273.15, "unit": "celsius" }, "name": "Oxygen sensor 1 bank 1 ceramic temperature"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "pri": "17", "fcm1": true, "dbg": true, "cmd": {"22": "1291"}, "freq": 5,
+  "signals": [
+    {"id": "SCIROCCO_COOLANT_T_AT_ENGINE_START", "path": "Engine", "fmt": { "len": 16, "max": 3003.6, "min": -3549.9, "div": 10, "add": -273.1, "sign": true, "unit": "celsius" }, "name": "Coolant temperature at engine start"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "fcm1": true, "dbg": true, "cmd": {"22": "1298"}, "freq": 5,
+  "signals": [
+    {"id": "SCIROCCO_CAT_T_BANK_1", "path": "Engine", "fmt": { "len": 16, "max": 3822, "min": -273, "div": 16, "add": -273.15, "unit": "celsius" }, "name": "Cat. temperature, bank 1"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "fcm1": true, "dbg": true, "cmd": {"22": "1299"}, "freq": 5,
+  "signals": [
+    {"id": "SCIROCCO_CAT_T_BANK_2", "path": "Engine", "fmt": { "len": 16, "max": 3822, "min": -273, "div": 16, "add": -273.15, "unit": "celsius" }, "name": "Cat. temperature, bank 2"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "pri": "17", "fcm1": true, "dbg": true, "cmd": {"22": "12B0"}, "freq": 0.25,
+  "signals": [
+    {"id": "SCIROCCO_ACCELERATION_29BIT", "path": "Movement", "fmt": { "len": 16, "max": 32.767, "min": -32.768, "mul": 10, "div": 10000, "sign": true, "unit": "metersPerSecondSquared" }, "name": "Acceleration"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "din": "03", "dbg": true, "cmd": {"22": "12C7"}, "freq": 1,
+  "signals": [
+    {"id": "SCIROCCO_PRE_INJ_2_ACTIVATION", "path": "Engine", "fmt": { "len": 16, "max": 655, "min": -655, "div": 50, "sign": true, "unit": "degrees" }, "name": "Pilot injection 2, activation start"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "din": "03", "dbg": true, "cmd": {"22": "12C8"}, "freq": 1,
+  "signals": [
+    {"id": "SCIROCCO_PRE_INJ_1_ACTIVATION", "path": "Engine", "fmt": { "len": 16, "max": 655, "min": -655, "div": 50, "sign": true, "unit": "degrees" }, "name": "Pilot injection 1, activation start"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "din": "03", "dbg": true, "cmd": {"22": "1334"}, "freq": 1,
+  "signals": [
+    {"id": "SCIROCCO_HIGH_P_EGR_ACTUATOR", "path": "Engine", "fmt": { "len": 16, "max": 327, "min": -327, "div": 100, "sign": true, "unit": "percent" }, "name": "High pressure EGR actuator, activation"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "pri": "17", "fcm1": true, "dbg": true, "cmd": {"22": "139C"}, "freq": 5,
+  "signals": [
+    {"id": "SCIROCCO_EXHAUST_GAS_T_AT_PROBE_BEFOR_PRECAT_MODEL_VALUE", "path": "Engine", "fmt": { "len": 16, "max": 3003.6, "min": -3549.9, "div": 10, "add": -273.1, "sign": true, "unit": "celsius" }, "name": "Exhaust gas temperature before the front catalytic converter, model value"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "pri": "17", "fcm1": true, "dbg": true, "cmd": {"22": "13A0"}, "freq": 5,
+  "signals": [
+    {"id": "SCIROCCO_COOLANT_T_MODELED_VALUE", "path": "Engine", "fmt": { "len": 16, "max": 3003.6, "min": -3549.9, "div": 10, "add": -273.1, "sign": true, "unit": "celsius" }, "name": "Coolant temperature modeled value"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "din": "03", "dbg": true, "cmd": {"22": "13B8"}, "freq": 1,
+  "signals": [
+    {"id": "SCIROCCO_OIL_P_SWITCH_VLV", "path": "Engine", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Oil pressure switch valve activation"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "13CD"}, "freq": 1,
+  "signals": [
+    {"id": "SCIROCCO_MAF_RATE", "path": "Engine", "fmt": { "len": 16, "max": 2047, "div": 32, "unit": "unknown" }, "name": "Mass air flow rate"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "fcm1": true, "dbg": true, "cmd": {"22": "13FA"}, "freq": 1,
+  "signals": [
+    {"id": "SCIROCCO_KNOCK_SENS_V_CYL_3", "path": "Battery", "fmt": { "len": 16, "max": 4.99, "mul": 0.000076294, "unit": "volts" }, "name": "Knock sensor voltage:, cylinder 3"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "fcm1": true, "dbg": true, "cmd": {"22": "13FC"}, "freq": 1,
+  "signals": [
+    {"id": "SCIROCCO_KNOCK_SENS_V_CYL_2", "path": "Battery", "fmt": { "len": 16, "max": 4.99, "mul": 0.000076294, "unit": "volts" }, "name": "Knock sensor voltage:, cylinder 2"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "fcm1": true, "dbg": true, "cmd": {"22": "13FD"}, "freq": 1,
+  "signals": [
+    {"id": "SCIROCCO_KNOCK_SENS_V_CYL_5", "path": "Battery", "fmt": { "len": 16, "max": 4.99, "mul": 0.000076294, "unit": "volts" }, "name": "Knock sensor voltage:, cylinder 5"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "fcm1": true, "dbg": true, "cmd": {"22": "1480"}, "freq": 3600,
+  "signals": [
+    {"id": "SCIROCCO_MIS_CNT_3", "path": "Engine", "fmt": { "len": 16, "max": 65535, "unit": "scalar" }, "name": "Misfires counter:, cylinder 3"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "fcm1": true, "dbg": true, "cmd": {"22": "1482"}, "freq": 3600,
+  "signals": [
+    {"id": "SCIROCCO_MIS_CNT_2", "path": "Engine", "fmt": { "len": 16, "max": 65535, "unit": "scalar" }, "name": "Misfires counter:, cylinder 2"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "fcm1": true, "dbg": true, "cmd": {"22": "1483"}, "freq": 3600,
+  "signals": [
+    {"id": "SCIROCCO_MIS_CNT_5", "path": "Engine", "fmt": { "len": 16, "max": 65535, "unit": "scalar" }, "name": "Misfires counter:, cylinder 5"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "fcm1": true, "dbg": true, "cmd": {"22": "1486"}, "freq": 0.25,
+  "signals": [
+    {"id": "SCIROCCO_MIS_PER_1000_RPM_3", "path": "Movement", "fmt": { "len": 16, "max": 65535, "unit": "scalar" }, "name": "Misfires per 1000 rpm:, cylinder 3"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "fcm1": true, "dbg": true, "cmd": {"22": "1489"}, "freq": 0.25,
+  "signals": [
+    {"id": "SCIROCCO_MIS_PER_1000_RPM_5", "path": "Movement", "fmt": { "len": 16, "max": 65535, "unit": "scalar" }, "name": "Misfires per 1000 rpm:, cylinder 5"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "fcm1": true, "dbg": true, "cmd": {"22": "148B"}, "freq": 0.25,
+  "signals": [
+    {"id": "SCIROCCO_MIS_PER_1000_RPM_ALL", "path": "Movement", "fmt": { "len": 16, "max": 65535, "unit": "scalar" }, "name": "Misfires per 1000 rpm, all cylinders"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "pri": "17", "fcm1": true, "dbg": true, "cmd": {"22": "149E"}, "freq": 5,
+  "signals": [
+    {"id": "SCIROCCO_INTAKE_AIR_T_IN_INTAKE_MANIFOLD", "path": "Engine", "fmt": { "len": 8, "max": 143.25, "min": -48, "mul": 0.75, "add": -48, "unit": "celsius" }, "name": "Intake air temperature in intake manifold"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "pri": "17", "fcm1": true, "dbg": true, "cmd": {"22": "14F9"}, "freq": 3600,
+  "signals": [
+    {"id": "SCIROCCO_MAIN_CAT_OSC_AGE_CORRECTION_FACTOR", "path": "Engine", "fmt": { "len": 16, "max": 2, "mul": 2, "div": 65535, "unit": "scalar" }, "name": "Main cat oxygen storage capacity age correction factor"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "1503"}, "freq": 1,
+  "signals": [
+    {"id": "SCIROCCO_EOP", "path": "Engine", "fmt": { "len": 16, "max": 157, "div": 416, "unit": "psi" }, "name": "Engine oil pressure"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "pri": "17", "fcm1": true, "dbg": true, "cmd": {"22": "1507"}, "freq": 3600,
+  "signals": [
+    {"id": "SCIROCCO_CAT_CONVERTER_OXYGEN_STORAGE_CAPACITY_MEASURED", "path": "Engine", "fmt": { "len": 16, "max": 6553.5, "mul": 1000, "div": 10000, "unit": "unknown" }, "name": "Cat. converter oxygen storage capacity measured"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "1512"}, "freq": 5,
+  "signals": [
+    {"id": "SCIROCCO_ECT_MIN", "path": "Engine", "fmt": { "len": 8, "max": 143.25, "min": -48, "mul": 3, "div": 4, "add": -48, "unit": "celsius" }, "name": "Coolant temperature, minimum value"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "15C0"}, "freq": 5,
+  "signals": [
+    {"id": "SCIROCCO_IAT_RAW", "path": "Engine", "fmt": { "len": 16, "max": 6280.4, "min": -273.1, "div": 10, "add": -273.1, "unit": "celsius" }, "name": "Intake air temperature raw value"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "pri": "17", "fcm1": true, "dbg": true, "cmd": {"22": "15CA"}, "freq": 1,
+  "signals": [
+    {"id": "SCIROCCO_GENERATOR_LOAD_NORMALIZED_VALUE", "path": "Engine", "fmt": { "len": 16, "max": 100, "div": 100, "sign": true, "unit": "percent" }, "name": "Generator load normalized value"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "pri": "17", "fcm1": true, "dbg": true, "cmd": {"22": "15CF"}, "freq": 0.25,
+  "signals": [
+    {"id": "SCIROCCO_LONGTITUDINAL_ACCELERATION_RAW_VALUE", "path": "Movement", "fmt": { "len": 16, "max": 32.767, "min": -32.768, "mul": 10, "div": 10000, "sign": true, "unit": "metersPerSecondSquared" }, "name": "Longitudinal acceleration, raw"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "pri": "17", "fcm1": true, "dbg": true, "cmd": {"22": "15D1"}, "freq": 0.25,
+  "signals": [
+    {"id": "SCIROCCO_VEHICLE_LATERAL_ACCELERATION_RAW_VALUE", "path": "Movement", "fmt": { "len": 16, "max": 327.67, "min": -327.68, "mul": 100, "div": 10000, "sign": true, "unit": "gravity" }, "name": "Vehicle lateral acceleration, raw value"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "pri": "17", "fcm1": true, "dbg": true, "cmd": {"22": "16F3"}, "freq": 0.25,
+  "signals": [
+    {"id": "SCIROCCO_CRANKSHAFT_VSS", "path": "Movement", "fmt": { "len": 16, "max": 32767.5, "div": 2, "unit": "rpm" }, "name": "Crankshaft speed", "suggestedMetric": "engineSpeed"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "1713"}, "freq": 1,
+  "signals": [
+    {"id": "SCIROCCO_TOT_MASS_GASOLINE", "path": "Engine", "fmt": { "len": 16, "max": 1398.0581, "mul": 0.021333, "unit": "unknown" }, "name": "Total mass of gasoline and ethyl alcohol in oil"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "1725"}, "freq": 3600,
+  "signals": [
+    {"id": "SCIROCCO_EARLY_IGN_CNT_CYL_2", "path": "Engine", "fmt": { "len": 16, "max": 65535, "unit": "scalar" }, "name": "Early ignition counter, cylinder 2"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "174B"}, "freq": 1,
+  "signals": [
+    {"id": "SCIROCCO_INT_CAM_ADPT_BIAS", "path": "Engine", "fmt": { "len": 16, "max": 719.9892, "min": -720.0112, "mul": 0.021973, "sign": true, "unit": "degrees" }, "name": "Intake camshaft, adaptation bias"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "din": "03", "dbg": true, "cmd": {"22": "1793"}, "freq": 1,
+  "signals": [
+    {"id": "SCIROCCO_OIL_ASH_LIM", "path": "Engine", "fmt": { "len": 16, "max": 327, "min": -327, "div": 100, "sign": true, "unit": "unknown" }, "name": "Oil ash limit"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "din": "03", "dbg": true, "cmd": {"22": "17F4"}, "freq": 1,
+  "signals": [
+    {"id": "SCIROCCO_LOW_P_EGR_CLOSING", "path": "Engine", "fmt": { "len": 16, "max": 100, "min": -699, "mul": -25, "div": 2048, "add": 100, "unit": "percent" }, "name": "Low pressure EGR closing"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "din": "03", "dbg": true, "cmd": {"22": "18CC"}, "freq": 0.25,
+  "signals": [
+    {"id": "SCIROCCO_REDUCING_AGENT_PMP", "path": "Movement", "fmt": { "len": 16, "max": 16383, "min": -16384, "div": 2, "sign": true, "unit": "rpm" }, "name": "Reducing agent pump, differential speed calculated"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "din": "03", "dbg": true, "cmd": {"22": "1A6C"}, "freq": 1,
+  "signals": [
+    {"id": "SCIROCCO_REDUCING_AGENT_TANK_ACT", "path": "Engine", "fmt": { "len": 16, "max": 131, "div": 500, "unit": "liters" }, "name": "Reducing agent tank volume, act. value filtered"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "din": "03", "dbg": true, "cmd": {"22": "1AF9"}, "freq": 1,
+  "signals": [
+    {"id": "SCIROCCO_OIL_LEVEL_METHOD_1", "path": "Engine", "fmt": { "len": 16, "max": 3276, "min": -3276, "div": 10, "sign": true, "unit": "percent" }, "name": "Oil level method 1"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "din": "03", "dbg": true, "cmd": {"22": "1AFA"}, "freq": 1,
+  "signals": [
+    {"id": "SCIROCCO_OIL_LEVEL_METHOD_2", "path": "Engine", "fmt": { "len": 16, "max": 3276, "min": -3276, "div": 10, "sign": true, "unit": "percent" }, "name": "Oil level method 2"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "din": "03", "dbg": true, "cmd": {"22": "1AFB"}, "freq": 1,
+  "signals": [
+    {"id": "SCIROCCO_OIL_LEVEL_METHOD_3", "path": "Engine", "fmt": { "len": 16, "max": 3276, "min": -3276, "div": 10, "sign": true, "unit": "percent" }, "name": "Oil level method 3"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "din": "03", "dbg": true, "cmd": {"22": "1B0E"}, "freq": 1,
+  "signals": [
+    {"id": "SCIROCCO_CHG_AIR_P_ACT", "path": "Battery", "fmt": { "len": 16, "max": 5119, "mul": 5, "div": 64, "unit": "unknown" }, "name": "Charge air pressure, actual value"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "din": "03", "dbg": true, "cmd": {"22": "1B11"}, "freq": 1,
+  "signals": [
+    {"id": "SCIROCCO_CHG_AIR_P_ACTUATOR_7E0", "path": "Battery", "fmt": { "len": 16, "max": 65535, "unit": "scalar" }, "name": "Charge air pressure actuator position digit.value"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "2007"}, "freq": 1,
+  "signals": [
+    {"id": "SCIROCCO_OIL_WARN_THR", "path": "Engine", "fmt": { "len": 16, "max": 32767, "min": -32768, "sign": true, "unit": "millimeters" }, "name": "Oil warning threshold"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "din": "03", "dbg": true, "cmd": {"22": "205D"}, "freq": 1,
+  "signals": [
+    {"id": "SCIROCCO_POST_INJ_1_7E0", "path": "Engine", "fmt": { "len": 16, "max": 65.535, "div": 1000, "unit": "milliseconds" }, "name": "Post injection 1"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "din": "03", "dbg": true, "cmd": {"22": "205F"}, "freq": 1,
+  "signals": [
+    {"id": "SCIROCCO_POST_INJ_2_7E0_7E0", "path": "Engine", "fmt": { "len": 16, "max": 65.535, "div": 1000, "unit": "milliseconds" }, "name": "Post injection 2"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "din": "03", "dbg": true, "cmd": {"22": "208A"}, "freq": 1,
+  "signals": [
+    {"id": "SCIROCCO_OIL_ASH_RESIDUE", "path": "Engine", "fmt": { "len": 32, "max": 1310, "mul": 0.0000003052, "unit": "unknown" }, "name": "Oil ash residue"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "din": "03", "dbg": true, "cmd": {"22": "20C0"}, "freq": 1,
+  "signals": [
+    {"id": "SCIROCCO_POST_INJ_3_7E0", "path": "Engine", "fmt": { "len": 16, "max": 65.535, "div": 1000, "unit": "milliseconds" }, "name": "Post injection 3"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "pri": "17", "fcm1": true, "dbg": true, "cmd": {"22": "24FC"}, "freq": 30,
+  "signals": [
+    {"id": "SCIROCCO_FUEL_TANK_FILL_LEVEL", "path": "Fuel", "fmt": { "len": 16, "max": 6553.5, "mul": 1000, "div": 10000, "unit": "liters" }, "name": "Fuel tank fill level"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "25CF"}, "freq": 1,
+  "signals": [
+    {"id": "SCIROCCO_OIL_P_TGT_7E0", "path": "Engine", "fmt": { "len": 16, "max": 3276, "min": -3276, "div": 10, "sign": true, "unit": "kilopascal" }, "name": "Oil pressure target"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "pri": "17", "fcm1": true, "dbg": true, "cmd": {"22": "291D"}, "freq": 1,
+  "signals": [
+    {"id": "SCIROCCO_MISFIRES_1000_RPM_C1", "path": "Movement", "fmt": { "len": 16, "max": 65535, "unit": "scalar" }, "name": "Misfires/1000 rpm, cylinder 1"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "pri": "17", "fcm1": true, "dbg": true, "cmd": {"22": "291E"}, "freq": 1,
+  "signals": [
+    {"id": "SCIROCCO_MISFIRES_1000_RPM_C3", "path": "Movement", "fmt": { "len": 16, "max": 65535, "unit": "scalar" }, "name": "Misfires/1000 rpm, cylinder 3"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "pri": "17", "fcm1": true, "dbg": true, "cmd": {"22": "291F"}, "freq": 1,
+  "signals": [
+    {"id": "SCIROCCO_MISFIRES_1000_RPM_C4", "path": "Movement", "fmt": { "len": 16, "max": 65535, "unit": "scalar" }, "name": "Misfires/1000 rpm, cylinder 4"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "pri": "17", "fcm1": true, "dbg": true, "cmd": {"22": "2920"}, "freq": 1,
+  "signals": [
+    {"id": "SCIROCCO_MISFIRES_1000_RPM_C2", "path": "Movement", "fmt": { "len": 16, "max": 65535, "unit": "scalar" }, "name": "Misfires/1000 rpm, cylinder 2"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "pri": "17", "fcm1": true, "dbg": true, "cmd": {"22": "2966"}, "freq": 1,
+  "signals": [
+    {"id": "SCIROCCO_MISFIRES_C1_7E0", "path": "Engine", "fmt": { "len": 16, "max": 65535, "unit": "scalar" }, "name": "Misfires, cylinder 1"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "pri": "17", "fcm1": true, "dbg": true, "cmd": {"22": "2967"}, "freq": 1,
+  "signals": [
+    {"id": "SCIROCCO_MISFIRES_C3_7E0", "path": "Engine", "fmt": { "len": 16, "max": 65535, "unit": "scalar" }, "name": "Misfires, cylinder 3"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "pri": "17", "fcm1": true, "dbg": true, "cmd": {"22": "2968"}, "freq": 1,
+  "signals": [
+    {"id": "SCIROCCO_MISFIRES_C4", "path": "Engine", "fmt": { "len": 16, "max": 65535, "unit": "scalar" }, "name": "Misfires, cylinder 4"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "pri": "17", "fcm1": true, "dbg": true, "cmd": {"22": "2969"}, "freq": 1,
+  "signals": [
+    {"id": "SCIROCCO_MISFIRES_C2", "path": "Engine", "fmt": { "len": 16, "max": 65535, "unit": "scalar" }, "name": "Misfires, cylinder 2"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "din": "03", "dbg": true, "cmd": {"22": "297B"}, "freq": 5,
+  "signals": [
+    {"id": "SCIROCCO_DPF_INPUT_GAS_T", "path": "Engine", "fmt": { "len": 8, "max": 1000, "min": -20, "mul": 4, "add": -20, "unit": "celsius" }, "name": "Diesel particulate filter input gas temperature"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "din": "03", "dbg": true, "cmd": {"22": "297D"}, "freq": 5,
+  "signals": [
+    {"id": "SCIROCCO_DPF_OUTPUT_GAS_T", "path": "Engine", "fmt": { "len": 8, "max": 1000, "min": -20, "mul": 4, "add": -20, "unit": "celsius" }, "name": "Diesel particulate filter output gas temperature"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "299C"}, "freq": 1,
+  "signals": [
+    {"id": "SCIROCCO_COMPRESSION_TEST_CYL_2", "path": "Engine", "fmt": { "len": 16, "max": 32767, "min": -32768, "sign": true, "unit": "rpm" }, "name": "Compression test, cylinder 2"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "29B1"}, "freq": 30,
+  "signals": [
+    {"id": "SCIROCCO_REMAINING_DIST_UNTIL", "path": "Trips", "fmt": { "len": 32, "max": 214748364, "div": 20, "unit": "kilometers" }, "name": "Remaining distance until reducing agent deficiency"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "29D1"}, "freq": 1,
+  "signals": [
+    {"id": "SCIROCCO_AIR_MASS_ACT_MG", "path": "Engine", "fmt": { "len": 16, "max": 327.67, "min": -327.68, "div": 100, "sign": true, "unit": "unknown" }, "name": "Air mass, actual value, mg/stroke"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "2AE9"}, "freq": 5,
+  "signals": [
+    {"id": "SCIROCCO_EXH_GAS_T_CALC_AFTER", "path": "Engine", "fmt": { "len": 16, "max": 1262.9904, "min": -273.15, "mul": 293, "div": 12500, "add": -273.15, "unit": "celsius" }, "name": "Exhaust gas temperature - calculated after catalyst"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "3961"}, "freq": 1,
+  "signals": [
+    {"id": "SCIROCCO_KNOCK_SENS_CYL_2", "path": "Engine", "fmt": { "len": 16, "max": 65.535, "div": 1000, "unit": "volts" }, "name": "Knock sensor, cylinder 2"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "3962"}, "freq": 1,
+  "signals": [
+    {"id": "SCIROCCO_KNOCK_SENS_CYL_3", "path": "Engine", "fmt": { "len": 16, "max": 65.535, "div": 1000, "unit": "volts" }, "name": "Knock sensor, cylinder 3"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "39E9"}, "freq": 1,
+  "signals": [
+    {"id": "SCIROCCO_SENS_PARTICLE_FLT_P", "path": "Engine", "fmt": { "len": 16, "max": 32767, "min": -32768, "sign": true, "unit": "unknown" }, "name": "Sensor for particle filter differential pressure, raw value"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "3F47"}, "freq": 3600,
+  "signals": [
+    {"id": "SCIROCCO_ADPT_VAL_CYL4_FAST", "path": "Engine", "fmt": { "len": 16, "max": 65.53, "div": 1000, "unit": "scalar" }, "name": "Adaptation val.cylinder4 fast diagnosis"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "3F4F"}, "freq": 5,
+  "signals": [
+    {"id": "SCIROCCO_CORR_FACTOR_OIL_T", "path": "Engine", "fmt": { "len": 16, "max": 7.99, "mul": 12207, "div": 100000000, "unit": "scalar" }, "name": "Correction factor of oil temperature for engine protection"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "3F68"}, "freq": 1,
+  "signals": [
+    {"id": "SCIROCCO_SECONDARY_AIR_INJ_1", "path": "Engine", "fmt": { "len": 16, "max": 65.535, "div": 1000, "unit": "bars" }, "name": "Secondary air injection sensor 1"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "fcm1": true, "dbg": true, "cmd": {"22": "40CE"}, "freq": 1,
+  "signals": [
+    {"id": "SCIROCCO_OIL_LEVEL_STATIC_7E0", "path": "Engine", "fmt": { "len": 16, "max": 3968, "min": -127, "div": 16, "add": -127, "unit": "millimeters" }, "name": "Oil level, static measurement"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "4183"}, "freq": 1,
+  "signals": [
+    {"id": "SCIROCCO_TIM_DEV_CURRENT_INT_1", "path": "Engine", "fmt": { "len": 16, "max": 327.67, "min": -327.68, "div": 100, "sign": true, "unit": "degrees" }, "name": "Timing deviation current value intake bank 1"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "430E"}, "freq": 1,
+  "signals": [
+    {"id": "SCIROCCO_NUM_INJECTIONS", "path": "Engine", "fmt": { "len": 16, "max": 65535, "unit": "scalar" }, "name": "Number of injections"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "din": "03", "dbg": true, "cmd": {"22": "4366"}, "freq": 1,
+  "signals": [
+    {"id": "SCIROCCO_NOX_SULFUR_CHG", "path": "Battery", "fmt": { "len": 16, "max": 655.35, "div": 100, "unit": "unknown" }, "name": "Nox sulfur charge"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "437C"}, "freq": 0.25,
+  "signals": [
+    {"id": "SCIROCCO_ENG_TQ_7E0", "path": "Engine", "fmt": { "len": 16, "max": 3276.7, "min": -3276.8, "div": 10, "sign": true, "unit": "newtonMeters" }, "name": "Engine torque"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "pri": "17", "fcm1": true, "dbg": true, "cmd": {"22": "4490"}, "freq": 5,
+  "signals": [
+    {"id": "SCIROCCO_COOLANT_T_AT_ENGINE_OUTLET_CALCULATED", "path": "Engine", "fmt": { "len": 16, "max": 3003.6, "min": -3549.9, "div": 10, "add": -273.1, "sign": true, "unit": "celsius" }, "name": "Coolant temperature at engine outlet, calculated"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "44FB"}, "freq": 5,
+  "signals": [
+    {"id": "SCIROCCO_DPF_SURFACE_T", "path": "Engine", "fmt": { "len": 16, "max": 1774.7875, "min": -2321.15, "div": 16, "add": -273.15, "sign": true, "unit": "celsius" }, "name": "Diesel particulate filter surface temperature"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "4E4A"}, "freq": 3600,
+  "signals": [
+    {"id": "SCIROCCO_EARLY_IGN_CNT_TOQUE_1", "path": "Engine", "fmt": {           "len": 16, "max": 65535, "unit": "scalar" }, "name": "Early ignition counter for toque reduction, cylinder 1"},
+    {"id": "SCIROCCO_EARLY_IGN_CNT_TOQUE_2", "path": "Engine", "fmt": {"bix": 16, "len": 16, "max": 65535, "unit": "scalar" }, "name": "Early ignition counter for toque reduction, cylinder 2"},
+    {"id": "SCIROCCO_EARLY_IGN_CNT_TOQUE_3", "path": "Engine", "fmt": {"bix": 32, "len": 16, "max": 65535, "unit": "scalar" }, "name": "Early ignition counter for toque reduction, cylinder 3"},
+    {"id": "SCIROCCO_EARLY_IGN_CNT_TOQUE_4", "path": "Engine", "fmt": {"bix": 48, "len": 16, "max": 65535, "unit": "scalar" }, "name": "Early ignition counter for toque reduction, cylinder 4"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "4F3F"}, "freq": 30,
+  "signals": [
+    {"id": "SCIROCCO_ODO_OXYDATION", "path": "Trips", "fmt": { "len": 32, "max": 4294967295, "unit": "kilometers" }, "name": "Odometer at oxidation catalytic converter replacement"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "51A0"}, "freq": 1,
+  "signals": [
+    {"id": "SCIROCCO_MILEAGE_OXIDATION", "path": "Transmission", "fmt": { "len": 16, "max": 655350, "mul": 10, "unit": "kilometers" }, "name": "Mileage of oxidation catalytic converter"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "51D4"}, "freq": 5,
+  "signals": [
+    {"id": "SCIROCCO_CYL_BLOCK_T_SENS", "path": "Engine", "fmt": { "len": 16, "max": 3003.6, "min": -3549.9, "div": 10, "add": -273.1, "sign": true, "unit": "celsius" }, "name": "Cylinder block temperature sensor"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "584D"}, "freq": 0.25,
+  "signals": [
+    {"id": "SCIROCCO_CYL_4_INTERNAL_TQ", "path": "Engine", "fmt": { "len": 16, "max": 3276.7, "min": -3276.8, "div": 10, "sign": true, "unit": "newtonMeters" }, "name": "Cylinder 4 internal torque"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "din": "03", "dbg": true, "cmd": {"22": "5851"}, "freq": 1,
+  "signals": [
+    {"id": "SCIROCCO_SERVICE_LIM_7E0", "path": "Engine", "fmt": { "len": 16, "max": 327.67, "min": -327.68, "div": 100, "sign": true, "unit": "unknown" }, "name": "Service limit"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "cmd": {"22": "F40D"}, "freq": 0.25, "dbgfilter": { "to": 2011, "from": 2013 },
+  "signals": [
+    {"id": "SCIROCCO_VSS", "path": "Movement", "fmt": { "len": 8, "max": 255, "unit": "kilometersPerHour" }, "name": "Vehicle speed", "suggestedMetric": "speed", "description": "Current vehicle speed."}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "cmd": {"22": "F41F"}, "freq": 1, "dbgfilter": { "to": 2011, "from": 2013 },
+  "signals": [
+    {"id": "SCIROCCO_RUNTM", "path": "Clocks", "fmt": { "len": 16, "max": 65535, "unit": "seconds" }, "name": "Time since engine start", "description": "How long it's been since the engine started."}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "cmd": {"22": "F421"}, "freq": 5, "dbgfilter": { "to": 2011, "from": 2013 },
+  "signals": [
+    {"id": "SCIROCCO_MIL_DIST", "path": "DTCs", "fmt": { "len": 16, "max": 65535, "unit": "kilometers" }, "name": "Distance traveled while mil was activated"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "cmd": {"22": "F430"}, "freq": 3600, "dbgfilter": { "to": 2011, "from": 2013 },
+  "signals": [
+    {"id": "SCIROCCO_WARM_UPS", "path": "DTCs", "fmt": { "len": 8, "max": 255, "unit": "scalar" }, "name": "Number of warm-ups since diagnostic trouble codes cleared"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "cmd": {"22": "F431"}, "freq": 5, "dbgfilter": { "to": 2011, "from": 2013 },
+  "signals": [
+    {"id": "SCIROCCO_CLR_DIST", "path": "DTCs", "fmt": { "len": 16, "max": 65535, "unit": "kilometers" }, "name": "Distance traveled since diagnostic trouble codes cleared", "suggestedMetric": "distanceSinceDTCsCleared"}
+  ]},
+{ "hdr": "7E0", "rax": "7E8", "cmd": {"22": "F442"}, "freq": 0.25, "dbgfilter": { "to": 2011, "from": 2013 },
+  "signals": [
+    {"id": "SCIROCCO_VPWR", "path": "Battery", "fmt": { "len": 16, "max": 65, "div": 1000, "unit": "volts" }, "name": "Control module voltage", "suggestedMetric": "starterBatteryVoltage"}
+  ]}
 ]
 }
