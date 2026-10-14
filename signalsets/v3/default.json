@@ -1,4 +1,7 @@
-{ "commands": [
+{ "ecu": [
+    { "hdr": "7E0", "type": "engine" }
+  ],
+  "commands": [
 { "hdr": "714", "rax": "77E", "fcm1": true, "cmd": {"22": "1014"}, "freq": 1, "dbgfilter": { "to": 2009, "years": [2011], "from": 2013 },
   "signals": [
     {"id": "SCIROCCO_AAT", "path": "Climate", "fmt": { "len": 8, "max": 77.5, "min": -50, "div": 2, "add": -50, "unit": "celsius" }, "name": "Ambient air temperature"}
