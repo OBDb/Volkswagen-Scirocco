@@ -4,8 +4,8 @@ test_cases:
     SCIROCCO_OIL_THERMAL_WEAR: 0
   response: 77E0562224B0000
 - expected_values:
-    SCIROCCO_OIL_THERMAL_WEAR: 142
-  response: 77E0562224B008E
+    SCIROCCO_OIL_THERMAL_WEAR: 144
+  response: 77E0562224B0090
 - expected_values:
     SCIROCCO_OIL_THERMAL_WEAR: 289
   response: 77E0562224B0121
