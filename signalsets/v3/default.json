@@ -46,11 +46,11 @@
   "signals": [
     {"id": "SCIROCCO_POST_INJ_3", "path": "Engine", "fmt": { "len": 16, "max": 6553.5, "div": 10, "unit": "unknown" }, "name": "Post injection 3"}
   ]},
-{ "hdr": "7E0", "rax": "7E8", "fcm1": true, "dbg": true, "cmd": {"22": "1000"}, "freq": 5,
+{ "hdr": "7E0", "rax": "7E8", "fcm1": true, "cmd": {"22": "1000"}, "freq": 5, "dbgfilter": { "to": 2016, "from": 2018 },
   "signals": [
     {"id": "SCIROCCO_AAT_7E0", "path": "Engine", "fmt": { "len": 8, "max": 143, "min": -48, "mul": 3, "div": 4, "add": -48, "unit": "celsius" }, "name": "Ambient temperature"}
   ]},
-{ "hdr": "7E0", "rax": "7E8", "fcm1": true, "dbg": true, "cmd": {"22": "1001"}, "freq": 5,
+{ "hdr": "7E0", "rax": "7E8", "fcm1": true, "cmd": {"22": "1001"}, "freq": 5, "dbgfilter": { "to": 2016, "from": 2018 },
   "signals": [
     {"id": "SCIROCCO_IAT_7E0", "path": "Engine", "fmt": { "len": 8, "max": 143, "min": -48, "mul": 3, "div": 4, "add": -48, "unit": "celsius" }, "name": "Intake air temperature"}
   ]},
@@ -234,7 +234,7 @@
   "signals": [
     {"id": "SCIROCCO_COOLANT_T_AT_ENGINE_START", "path": "Engine", "fmt": { "len": 16, "max": 3003.6, "min": -3549.9, "div": 10, "add": -273.1, "sign": true, "unit": "celsius" }, "name": "Coolant temperature at engine start"}
   ]},
-{ "hdr": "7E0", "rax": "7E8", "fcm1": true, "dbg": true, "cmd": {"22": "1298"}, "freq": 5,
+{ "hdr": "7E0", "rax": "7E8", "fcm1": true, "cmd": {"22": "1298"}, "freq": 5, "dbgfilter": { "to": 2016, "from": 2018 },
   "signals": [
     {"id": "SCIROCCO_CAT_T_BANK_1", "path": "Engine", "fmt": { "len": 16, "max": 3822, "min": -273, "div": 16, "add": -273.15, "unit": "celsius" }, "name": "Cat. temperature, bank 1"}
   ]},
@@ -306,7 +306,7 @@
   "signals": [
     {"id": "SCIROCCO_MIS_PER_1000_RPM_5", "path": "Movement", "fmt": { "len": 16, "max": 65535, "unit": "scalar" }, "name": "Misfires per 1000 rpm:, cylinder 5"}
   ]},
-{ "hdr": "7E0", "rax": "7E8", "fcm1": true, "dbg": true, "cmd": {"22": "148B"}, "freq": 0.25,
+{ "hdr": "7E0", "rax": "7E8", "fcm1": true, "cmd": {"22": "148B"}, "freq": 0.25, "dbgfilter": { "to": 2016, "from": 2018 },
   "signals": [
     {"id": "SCIROCCO_MIS_PER_1000_RPM_ALL", "path": "Movement", "fmt": { "len": 16, "max": 65535, "unit": "scalar" }, "name": "Misfires per 1000 rpm, all cylinders"}
   ]},
@@ -430,7 +430,7 @@
   "signals": [
     {"id": "SCIROCCO_MISFIRES_1000_RPM_C1", "path": "Movement", "fmt": { "len": 16, "max": 65535, "unit": "scalar" }, "name": "Misfires/1000 rpm, cylinder 1"}
   ]},
-{ "hdr": "7E0", "rax": "7E8", "pri": "17", "fcm1": true, "dbg": true, "cmd": {"22": "291E"}, "freq": 1,
+{ "hdr": "7E0", "rax": "7E8", "pri": "17", "fcm1": true, "cmd": {"22": "291E"}, "freq": 1, "dbgfilter": { "to": 2016, "from": 2018 },
   "signals": [
     {"id": "SCIROCCO_MISFIRES_1000_RPM_C3", "path": "Movement", "fmt": { "len": 16, "max": 65535, "unit": "scalar" }, "name": "Misfires/1000 rpm, cylinder 3"}
   ]},
@@ -502,11 +502,11 @@
   "signals": [
     {"id": "SCIROCCO_CORR_FACTOR_OIL_T", "path": "Engine", "fmt": { "len": 16, "max": 7.99, "mul": 12207, "div": 100000000, "unit": "scalar" }, "name": "Correction factor of oil temperature for engine protection"}
   ]},
-{ "hdr": "7E0", "rax": "7E8", "dbg": true, "cmd": {"22": "3F68"}, "freq": 1,
+{ "hdr": "7E0", "rax": "7E8", "cmd": {"22": "3F68"}, "freq": 1, "dbgfilter": { "to": 2016, "from": 2018 },
   "signals": [
     {"id": "SCIROCCO_SECONDARY_AIR_INJ_1", "path": "Engine", "fmt": { "len": 16, "max": 65.535, "div": 1000, "unit": "bars" }, "name": "Secondary air injection sensor 1"}
   ]},
-{ "hdr": "7E0", "rax": "7E8", "fcm1": true, "dbg": true, "cmd": {"22": "40CE"}, "freq": 1,
+{ "hdr": "7E0", "rax": "7E8", "fcm1": true, "cmd": {"22": "40CE"}, "freq": 1, "dbgfilter": { "to": 2016, "from": 2018 },
   "signals": [
     {"id": "SCIROCCO_OIL_LEVEL_STATIC_7E0", "path": "Engine", "fmt": { "len": 16, "max": 3968, "min": -127, "div": 16, "add": -127, "unit": "millimeters" }, "name": "Oil level, static measurement"}
   ]},
