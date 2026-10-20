@@ -1,0 +1,17 @@
+command_id: 714.77E.222294|fc=1
+test_cases:
+- expected_values:
+    SCIROCCO_DTE: 405
+  response: '77E056222940195'
+- expected_values:
+    SCIROCCO_DTE: 407
+  response: '77E056222940197'
+- expected_values:
+    SCIROCCO_DTE: 410
+  response: 77E05622294019A
+- expected_values:
+    SCIROCCO_DTE: 411
+  response: 77E05622294019B
+- expected_values:
+    SCIROCCO_DTE: 414
+  response: 77E05622294019E

@@ -1,0 +1,14 @@
+command_id: 714.77E.222206|fc=1
+test_cases:
+- expected_values:
+    SCIROCCO_FLI: 44
+  response: 77E046222062C
+- expected_values:
+    SCIROCCO_FLI: 45
+  response: 77E046222062D
+- expected_values:
+    SCIROCCO_FLI: 47
+  response: 77E046222062F
+- expected_values:
+    SCIROCCO_FLI: 52
+  response: '77E0462220634'
