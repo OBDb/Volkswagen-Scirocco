@@ -1,0 +1,5 @@
+command_id: 7E0.7E8.221298|fc=1
+test_cases:
+- expected_values:
+    SCIROCCO_CAT_T_BANK_1: 178.975
+  response: 7E8056212981C42
