@@ -15,3 +15,12 @@ test_cases:
 - expected_values:
     SCIROCCO_DTE: 414
   response: 77E05622294019E
+- expected_values:
+    SCIROCCO_DTE: 428
+  response: 77E0562229401AC
+- expected_values:
+    SCIROCCO_DTE: 431
+  response: 77E0562229401AF
+- expected_values:
+    SCIROCCO_DTE: 433
+  response: 77E0562229401B1
