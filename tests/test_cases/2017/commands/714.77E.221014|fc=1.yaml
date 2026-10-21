@@ -4,6 +4,9 @@ test_cases:
     SCIROCCO_AAT: 8.5
   response: '77E0462101475'
 - expected_values:
+    SCIROCCO_AAT: 9.5
+  response: '77E0462101477'
+- expected_values:
     SCIROCCO_AAT: 10.5
   response: '77E0462101479'
 - expected_values:
