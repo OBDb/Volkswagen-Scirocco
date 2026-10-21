@@ -4,6 +4,9 @@ test_cases:
     SCIROCCO_FLI: 36
   response: '77E0462220624'
 - expected_values:
+    SCIROCCO_FLI: 39
+  response: '77E0462220627'
+- expected_values:
     SCIROCCO_FLI: 40
   response: '77E0462220628'
 - expected_values:
