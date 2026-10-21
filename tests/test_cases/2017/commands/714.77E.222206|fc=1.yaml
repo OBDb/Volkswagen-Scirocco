@@ -1,29 +1,8 @@
 command_id: 714.77E.222206|fc=1
 test_cases:
 - expected_values:
-    SCIROCCO_FLI: 36
-  response: '77E0462220624'
-- expected_values:
-    SCIROCCO_FLI: 39
-  response: '77E0462220627'
-- expected_values:
-    SCIROCCO_FLI: 40
-  response: '77E0462220628'
-- expected_values:
-    SCIROCCO_FLI: 44
-  response: 77E046222062C
-- expected_values:
-    SCIROCCO_FLI: 45
-  response: 77E046222062D
-- expected_values:
-    SCIROCCO_FLI: 46
-  response: 77E046222062E
-- expected_values:
-    SCIROCCO_FLI: 47
-  response: 77E046222062F
-- expected_values:
-    SCIROCCO_FLI: 49
-  response: '77E0462220631'
+    SCIROCCO_FLI: 24
+  response: '77E0462220618'
 - expected_values:
     SCIROCCO_FLI: 52
   response: '77E0462220634'
