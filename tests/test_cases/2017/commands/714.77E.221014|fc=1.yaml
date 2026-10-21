@@ -1,6 +1,9 @@
 command_id: 714.77E.221014|fc=1
 test_cases:
 - expected_values:
+    SCIROCCO_AAT: 8.5
+  response: '77E0462101475'
+- expected_values:
     SCIROCCO_AAT: 10.5
   response: '77E0462101479'
 - expected_values:
