@@ -1,8 +1,8 @@
 command_id: 714.77E.222294|fc=1
 test_cases:
 - expected_values:
-    SCIROCCO_DTE: 134
-  response: '77E056222940086'
+    SCIROCCO_DTE: 76
+  response: 77E05622294004C
 - expected_values:
     SCIROCCO_DTE: 359
   response: '77E056222940167'
