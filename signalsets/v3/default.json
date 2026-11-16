@@ -53,7 +53,7 @@
   ]},
 { "hdr": "7E0", "rax": "7E8", "fcm1": true, "cmd": {"22": "1001"}, "freq": 5, "dbgfilter": { "to": 2016, "from": 2018 },
   "signals": [
-    {"id": "SCIROCCO_IAT_7E0", "path": "Engine", "fmt": { "len": 8, "max": 143, "min": -48, "mul": 3, "div": 4, "add": -48, "unit": "celsius" }, "name": "Intake air temperature"}
+    {"id": "SCIROCCO_IAT_7E0", "path": "Engine", "fmt": { "len": 8, "max": 143, "min": -48, "mul": 3, "div": 4, "add": -48, "unit": "celsius" }, "name": "Intake air temperature", "suggestedMetric": "intakeAirTemperature"}
   ]},
 { "hdr": "7E0", "rax": "7E8", "pri": "17", "fcm1": true, "dbg": true, "cmd": {"22": "1010"}, "freq": 0.25,
   "signals": [
@@ -313,7 +313,7 @@
   ]},
 { "hdr": "7E0", "rax": "7E8", "pri": "17", "fcm1": true, "dbg": true, "cmd": {"22": "149E"}, "freq": 5,
   "signals": [
-    {"id": "SCIROCCO_INTAKE_AIR_T_IN_INTAKE_MANIFOLD", "path": "Engine", "fmt": { "len": 8, "max": 143.25, "min": -48, "mul": 0.75, "add": -48, "unit": "celsius" }, "name": "Intake air temperature in intake manifold"}
+    {"id": "SCIROCCO_INTAKE_AIR_T_IN_INTAKE_MANIFOLD", "path": "Engine", "fmt": { "len": 8, "max": 143.25, "min": -48, "mul": 0.75, "add": -48, "unit": "celsius" }, "name": "Intake air temperature in intake manifold", "suggestedMetric": "intakeAirTemperature"}
   ]},
 { "hdr": "7E0", "rax": "7E8", "pri": "17", "fcm1": true, "dbg": true, "cmd": {"22": "14F9"}, "freq": 3600,
   "signals": [
